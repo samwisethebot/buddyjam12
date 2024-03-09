@@ -23,7 +23,7 @@ public class Adder : MonoBehaviour
 
     void SetCam() //Adds to the camera the movement scripts...
     {
-        mainCam = GameObject.Find("Main Camera");
+        mainCam = GameObject.Find("Main Camera"); //Camera.main works too
         mainCam.AddComponent<MoveCamera>();
         mainCam.AddComponent<PlayerCam>();
         movCam = mainCam.GetComponent<MoveCamera>();
