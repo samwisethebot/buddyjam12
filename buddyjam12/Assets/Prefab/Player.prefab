@@ -82,8 +82,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 672db81499cdb19498d716b2dd995efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camSenX: 38
-  camSenY: 44
+  camSenX: 54
+  camSenY: 50
 --- !u!114 &-2324270148547613560
 MonoBehaviour:
   m_ObjectHideFlags: 0
