@@ -45,7 +45,18 @@ public class RaycastInteractable : MonoBehaviour
             {
                 objHit.rigidbody.AddForce(0, force * 100, 0);
             }
-            
+
+            //checks if gameobject has openDrawer script, then plays that interaction
+            else if( objHit.collider.gameObject.TryGetComponent<OpenDrawer>(out OpenDrawer drawerScript))
+            {
+                drawerScript.drawerInteraction();
+            }
+
+            else if (objHit.collider.gameObject.TryGetComponent<OpenCabinet>(out OpenCabinet cabinetScript))
+            {
+                cabinetScript.cabinetInteraction();
+            }
+
         }
     }
     

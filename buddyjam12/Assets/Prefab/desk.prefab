@@ -93,7 +93,8 @@ GameObject:
   - component: {fileID: 5767771362085455120}
   - component: {fileID: 832143663722301417}
   - component: {fileID: 7854119613190059979}
-  m_Layer: 0
+  - component: {fileID: 4174953748686527089}
+  m_Layer: 11
   m_Name: topDrawer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -174,8 +175,23 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.36246005, y: 0.20346129, z: 0.6710025}
-  m_Center: {x: 0, y: -0.0034230314, z: -0.017094254}
+  m_Size: {x: 0.36246005, y: 0.20346129, z: 0.73166275}
+  m_Center: {x: 0, y: -0.0034230351, z: 0.013235852}
+--- !u!114 &4174953748686527089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2720927918596826383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 144f35e786fb83e4bad1425d5387ce17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isOpen: 0
+  openPosition: 0.6
+  drawerTime: 0.5
 --- !u!1 &2754982685513977225
 GameObject:
   m_ObjectHideFlags: 0
@@ -188,7 +204,8 @@ GameObject:
   - component: {fileID: 579635568571361575}
   - component: {fileID: 2703659094091497107}
   - component: {fileID: 1925651202651488625}
-  m_Layer: 0
+  - component: {fileID: 6667653668310758220}
+  m_Layer: 11
   m_Name: bottomDrawer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -269,8 +286,23 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.36246005, y: 0.20346132, z: 0.6710025}
-  m_Center: {x: 0, y: -0.0034229346, z: -0.017094254}
+  m_Size: {x: 0.36246005, y: 0.20346132, z: 0.72942746}
+  m_Center: {x: 0, y: -0.0034229308, z: 0.01211822}
+--- !u!114 &6667653668310758220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2754982685513977225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 144f35e786fb83e4bad1425d5387ce17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isOpen: 0
+  openPosition: 0.6
+  drawerTime: 0.5
 --- !u!1 &4043247071574828012
 GameObject:
   m_ObjectHideFlags: 0
@@ -413,7 +445,8 @@ GameObject:
   - component: {fileID: 3333123283763109103}
   - component: {fileID: 5047837982235214067}
   - component: {fileID: 2460609631305223150}
-  m_Layer: 0
+  - component: {fileID: 8790093451774115883}
+  m_Layer: 11
   m_Name: midDrawer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -494,5 +527,20 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.36246005, y: 0.20346129, z: 0.6710025}
-  m_Center: {x: 0, y: -0.0034229867, z: -0.017094254}
+  m_Size: {x: 0.36246005, y: 0.20346129, z: 0.7303712}
+  m_Center: {x: 0, y: -0.0034229904, z: 0.0125900805}
+--- !u!114 &8790093451774115883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7531404990372487460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 144f35e786fb83e4bad1425d5387ce17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isOpen: 0
+  openPosition: 0.6
+  drawerTime: 0.5
