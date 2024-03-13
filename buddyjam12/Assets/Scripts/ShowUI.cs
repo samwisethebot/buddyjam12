@@ -66,6 +66,7 @@ public class ShowUI : MonoBehaviour
         cam.GetComponent<PlayerCam>().enabled = false;
         cam.GetComponent<MoveCamera>().enabled = false;
         Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         cursor.SetActive(false);
     }
 
