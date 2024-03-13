@@ -10,8 +10,9 @@ public class Adder : MonoBehaviour
     private MoveCamera movCam;
     private PlayerCam pCam;
     
-    void Start()
+    void Awake()
     {
+       // Cursor.lockState = CursorLockMode.Locked; Locking the cursor bugs the seetings UI needs revision
         SetCam();
     }
 

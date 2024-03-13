@@ -18,7 +18,7 @@ public class PlayerCam : MonoBehaviour
 
     private void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.lockState = CursorLockMode.Locked; Locking the cursor bugs the settings UI needs revision
     }
 
     private void Update()
