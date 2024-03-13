@@ -8,10 +8,16 @@ public class RaycastInteractable : MonoBehaviour
     public Camera mainCam;
     public float distance;
     public LayerMask mask;
+    public LayerMask validMask;
+    public LayerMask itemsMask;
+
+
     void Start()
     {
         mainCam = Camera.main;
         mask = LayerMask.GetMask("interactRaycast");
+        validMask = LayerMask.GetMask("validItemLayer");
+        itemsMask = LayerMask.GetMask("itemsLayer");
 
     }
         void Update()
@@ -56,7 +62,39 @@ public class RaycastInteractable : MonoBehaviour
             {
                 cabinetScript.cabinetInteraction();
             }
+        }
+        //adding check for the validMask
+        else if (Physics.Raycast(ray, out objHit, distance, validMask))
+        {
+            Debug.Log(objHit.transform.name);
 
+            if (objHit.rigidbody) 
+            {
+                objHit.rigidbody.AddForce(0, force * 100, 0);
+            }
+            
+            else
+            {
+                Debug.Log("Clicked on the valid item");
+                //move on to winning scene
+            }
+        }
+
+        //adding check for all invalid items
+        else if (Physics.Raycast(ray, out objHit, distance, itemsMask))
+        {
+            Debug.Log(objHit.transform.name);
+
+            if (objHit.rigidbody) 
+            {
+                objHit.rigidbody.AddForce(0, force * 100, 0);
+            }
+            
+            else
+            {
+                Debug.Log("Clicked on the wrong item");
+                //move on to losing scene
+            }
         }
     }
     
