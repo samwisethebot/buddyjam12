@@ -21,7 +21,7 @@ public class PickItem : MonoBehaviour
     void Pick()
     {
         int randomIndex = Random.Range(0, itemsToPickFrom.Length);
-        Debug.Log(itemsToPickFrom[randomIndex]);
+        Debug.Log("Item to search: " + itemsToPickFrom[randomIndex]);
         itemText.text = itemsToPickFrom[randomIndex].ToString();
         itemsToPickFrom[randomIndex].layer = LayerMask.NameToLayer("validItemLayer");
 

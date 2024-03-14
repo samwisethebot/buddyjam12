@@ -7,7 +7,7 @@ public class RaycastInteractable : MonoBehaviour
     public float force;
     public Camera mainCam;
     public float distance;
-    public LayerMask mask;
+    public LayerMask interactMask;
     public LayerMask validMask;
     public LayerMask itemsMask;
 
@@ -15,86 +15,64 @@ public class RaycastInteractable : MonoBehaviour
     void Start()
     {
         mainCam = Camera.main;
-        mask = LayerMask.GetMask("interactRaycast");
+        interactMask = LayerMask.GetMask("interactRaycast");
         validMask = LayerMask.GetMask("validItemLayer");
         itemsMask = LayerMask.GetMask("itemsLayer");
 
     }
-        void Update()
-        {
+    void Update()
+    {
 
-          if (Input.GetMouseButtonDown(0))
-          {
-             showRay();
-          }
+      if (Input.GetMouseButtonDown(0))
+      {
+         showRay();
+      }
 
-        }
+    }
 
     void showRay()
     {
-        //Shows visually the ray in the scene, but does nothing
+        //Shows VISUALLY the ray trajectory in the scene
         Vector3 mousePos = Input.mousePosition;
         mousePos.z = distance;
         mousePos = mainCam.ScreenToWorldPoint(mousePos);
         Debug.DrawRay(transform.position, mousePos - transform.position, Color.blue);
 
-        //Creates the ray in the scene and detects a colission + adds force to it
-
+        //Creates the ray in the scene and detects a colission + any action afterwards
         Ray ray = mainCam.ScreenPointToRay(Input.mousePosition);
         RaycastHit objHit;
 
-        if (Physics.Raycast(ray, out objHit, distance, mask)) //Ray, colission obj, distance of ray, identify by mask
+        if (Physics.Raycast(ray, out objHit, distance, interactMask)) //Ray, colission obj, distance of ray, identify by mask
         {
-            Debug.Log(objHit.transform.name);
-
-            if (objHit.rigidbody) 
-            {
-                objHit.rigidbody.AddForce(0, force * 100, 0);
-            }
-
+            Debug.Log(objHit.transform.name + " is interactable");
+           
             //checks if gameobject has openDrawer script, then plays that interaction
-            else if( objHit.collider.gameObject.TryGetComponent<OpenDrawer>(out OpenDrawer drawerScript))
+            if (objHit.collider.gameObject.TryGetComponent<OpenDrawer>(out OpenDrawer drawerScript))
             {
                 drawerScript.drawerInteraction();
             }
 
-            else if (objHit.collider.gameObject.TryGetComponent<OpenCabinet>(out OpenCabinet cabinetScript))
+            //checks if gameobject has openCabinet script, then plays that interaction
+            if (objHit.collider.gameObject.TryGetComponent<OpenCabinet>(out OpenCabinet cabinetScript))
             {
                 cabinetScript.cabinetInteraction();
             }
         }
-        //adding check for the validMask
-        else if (Physics.Raycast(ray, out objHit, distance, validMask))
-        {
-            Debug.Log(objHit.transform.name);
 
-            if (objHit.rigidbody) 
-            {
-                objHit.rigidbody.AddForce(0, force * 100, 0);
-            }
+        //Adding check for the validMask
+        else if (Physics.Raycast(ray, out objHit, distance, validMask))
+        {                       
+            Debug.Log("Clicked on the valid <" + objHit.transform.name + "> item");
+            //move on to winning scene...
             
-            else
-            {
-                Debug.Log("Clicked on the valid item");
-                //move on to winning scene
-            }
         }
 
-        //adding check for all invalid items
+        //Adding check for the itemMask (invalid items)
         else if (Physics.Raycast(ray, out objHit, distance, itemsMask))
-        {
-            Debug.Log(objHit.transform.name);
-
-            if (objHit.rigidbody) 
-            {
-                objHit.rigidbody.AddForce(0, force * 100, 0);
-            }
+        {                             
+            Debug.Log("Clicked on the wrong <" + objHit.transform.name + "> item");
+            //move on to losing scene...
             
-            else
-            {
-                Debug.Log("Clicked on the wrong item");
-                //move on to losing scene
-            }
         }
     }
     
