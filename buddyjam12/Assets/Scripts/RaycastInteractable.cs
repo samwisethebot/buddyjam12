@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class RaycastInteractable : MonoBehaviour
 {
@@ -10,6 +11,11 @@ public class RaycastInteractable : MonoBehaviour
     public LayerMask interactMask;
     public LayerMask validMask;
     public LayerMask itemsMask;
+    public GameObject panelValid;
+    public GameObject panelInvalid;
+    public string winningLevel;
+    public string losingLevel;
+
 
 
     void Start()
@@ -63,15 +69,17 @@ public class RaycastInteractable : MonoBehaviour
         else if (Physics.Raycast(ray, out objHit, distance, validMask))
         {                       
             Debug.Log("Clicked on the valid <" + objHit.transform.name + "> item");
-            //move on to winning scene...
+            SceneManager.LoadScene(winningLevel);
+            //panelValid.SetActive(true);
             
         }
 
-        //Adding check for the itemMask (invalid items)
+        //Adding check for the itemsMask (invalid items)
         else if (Physics.Raycast(ray, out objHit, distance, itemsMask))
         {                             
             Debug.Log("Clicked on the wrong <" + objHit.transform.name + "> item");
-            //move on to losing scene...
+            SceneManager.LoadScene(losingLevel);
+            //panelInvalid.SetActive(true);
             
         }
     }

@@ -8,6 +8,7 @@ using UnityEngine.EventSystems;
 public class PickItem : MonoBehaviour
 {
     public GameObject[] itemsToPickFrom;
+    string[] descriptions =  {"Item 0 Description", "Item 1 Description", "Item 2 Description"};
     [SerializeField] TMP_Text itemText; 
   
     //all items player can chose from need to be set to the itemsLayer
@@ -22,7 +23,7 @@ public class PickItem : MonoBehaviour
     {
         int randomIndex = Random.Range(0, itemsToPickFrom.Length);
         Debug.Log("Item to search: " + itemsToPickFrom[randomIndex]);
-        itemText.text = itemsToPickFrom[randomIndex].ToString();
+        itemText.text =  descriptions[randomIndex];
         itemsToPickFrom[randomIndex].layer = LayerMask.NameToLayer("validItemLayer");
 
     }
