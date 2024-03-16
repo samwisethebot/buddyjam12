@@ -10,6 +10,7 @@ public class PanelScript : MonoBehaviour
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject cam;
     [SerializeField] private GameObject cursor;
+    public bool shouldActivate = true;
     public GameObject panelValid;
     public GameObject panelInvalid;
     public bool showPanelValid;
@@ -42,7 +43,7 @@ public class PanelScript : MonoBehaviour
         
         {
             panelInvalid.SetActive(false);
-            if(showPanelValid == false)
+            if(showPanelValid == false && shouldActivate)
             {
              ActivatePlayer();
              panelValid.SetActive(false);
@@ -57,7 +58,7 @@ public class PanelScript : MonoBehaviour
 
         else if (showPanelValid == false)
         {
-            if(showPanelInvalid == false)
+            if(showPanelInvalid == false && shouldActivate)
             {
              ActivatePlayer();
              panelInvalid.SetActive(false);

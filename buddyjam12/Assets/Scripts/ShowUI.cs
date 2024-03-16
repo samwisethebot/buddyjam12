@@ -11,6 +11,8 @@ public class ShowUI : MonoBehaviour
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject cam;
     [SerializeField] private GameObject cursor;
+    [SerializeField] private GameObject gameplayScript;
+    [SerializeField] private GameObject panel;
 
     public bool isShowing;
     public float showingPosition;
@@ -22,6 +24,8 @@ public class ShowUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        panel = GameObject.Find("Panel");
+        gameplayScript = GameObject.Find("Gameplay");
         player = GameObject.Find("Player");
         cam = GameObject.Find("Main Camera");
         cursor = GameObject.Find("Cursor");
@@ -62,20 +66,27 @@ public class ShowUI : MonoBehaviour
 
     private void StopPlayer()
     {
+        panel.GetComponent<PanelScript>().shouldActivate = false;
+
         player.SetActive(false);
         cam.GetComponent<PlayerCam>().enabled = false;
         cam.GetComponent<MoveCamera>().enabled = false;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         cursor.SetActive(false);
+        gameplayScript.GetComponent<Timer>().timeRunning = false;
+        
     }
 
     private void ActivatePlayer()
     {
+        panel.GetComponent<PanelScript>().shouldActivate = true;
+
         player.SetActive(true);
         cam.GetComponent<PlayerCam>().enabled = true;
         cam.GetComponent<MoveCamera>().enabled = true;
         Cursor.lockState = CursorLockMode.Locked;
         cursor.SetActive(true);
+        gameplayScript.GetComponent<Timer>().timeRunning = true;
     }
 }

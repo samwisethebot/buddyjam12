@@ -11,10 +11,12 @@ public class Timer : MonoBehaviour
     [SerializeField] float startTime;
     float currentTime;
     bool hasTriggered;
+    public bool timeRunning = true;
 
     // Start is called before the first frame update
     void Start()
     {
+        timeRunning = true;
         currentTime = startTime;
     }
 
@@ -22,7 +24,11 @@ public class Timer : MonoBehaviour
     void Update()
     {
         timerText.text = "Timer: " + Mathf.RoundToInt(currentTime);
-        currentTime -= Time.deltaTime;
+
+        if (timeRunning)
+        {
+            currentTime -= Time.deltaTime;
+        }
 
         if(currentTime<= 0 && !hasTriggered)
         {

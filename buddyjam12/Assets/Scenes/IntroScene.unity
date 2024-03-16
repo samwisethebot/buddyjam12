@@ -722,6 +722,8 @@ GameObject:
   - component: {fileID: 424288130}
   - component: {fileID: 424288134}
   - component: {fileID: 424288133}
+  - component: {fileID: 424288136}
+  - component: {fileID: 424288135}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -756,7 +758,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 424288120}
   selectedCommands:
-  - {fileID: 424288130}
+  - {fileID: 424288135}
   variables: []
   description: 
   stepPause: 0
@@ -811,7 +813,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 68
     y: 70
-    width: 118.085106
+    width: 78.085106
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -825,9 +827,11 @@ MonoBehaviour:
   - {fileID: 424288134}
   - {fileID: 424288129}
   - {fileID: 424288128}
+  - {fileID: 424288136}
   - {fileID: 424288119}
   - {fileID: 424288127}
   - {fileID: 424288132}
+  - {fileID: 424288135}
   - {fileID: 424288126}
   - {fileID: 424288125}
   - {fileID: 424288131}
@@ -1149,7 +1153,7 @@ MonoBehaviour:
   stage: {fileID: 0}
   character: {fileID: 1620653600}
   replacedCharacter: {fileID: 0}
-  portrait: {fileID: 21300000, guid: a78540e61675ee946a78de3b4f855da3, type: 3}
+  portrait: {fileID: 21300000, guid: 3751c0e402f3e7643bc0f7b235c0cca3, type: 3}
   offset: 0
   fromPosition: {fileID: 776947926}
   toPosition: {fileID: 1336731296}
@@ -1179,7 +1183,7 @@ MonoBehaviour:
   stage: {fileID: 0}
   character: {fileID: 1466376812}
   replacedCharacter: {fileID: 0}
-  portrait: {fileID: 21300000, guid: 06e6264fa02b51343bfee82bcd371081, type: 3}
+  portrait: {fileID: 21300000, guid: fcac114e711a86544bba035546d863fe, type: 3}
   offset: 0
   fromPosition: {fileID: 1899062255}
   toPosition: {fileID: 1574257240}
@@ -1189,6 +1193,66 @@ MonoBehaviour:
   moveDuration: 1
   shiftOffset: {x: 0, y: 0}
   move: 1
+  shiftIntoPlace: 0
+  waitUntilFinished: 0
+--- !u!114 &424288135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 424288117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ac5ce55bc698fa4290939ef6e426501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 15
+  indentLevel: 0
+  display: 1
+  stage: {fileID: 0}
+  character: {fileID: 1620653600}
+  replacedCharacter: {fileID: 0}
+  portrait: {fileID: 21300000, guid: f083f2c7419a1c84cb2a48ff0c021fce, type: 3}
+  offset: 0
+  fromPosition: {fileID: 0}
+  toPosition: {fileID: 0}
+  facing: 0
+  useDefaultSettings: 1
+  fadeDuration: 0.5
+  moveDuration: 1
+  shiftOffset: {x: 0, y: 0}
+  move: 0
+  shiftIntoPlace: 0
+  waitUntilFinished: 0
+--- !u!114 &424288136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 424288117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ac5ce55bc698fa4290939ef6e426501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 14
+  indentLevel: 0
+  display: 1
+  stage: {fileID: 0}
+  character: {fileID: 1466376812}
+  replacedCharacter: {fileID: 0}
+  portrait: {fileID: 21300000, guid: b04a48e9927e3c64c97c046048576561, type: 3}
+  offset: 0
+  fromPosition: {fileID: 0}
+  toPosition: {fileID: 0}
+  facing: 0
+  useDefaultSettings: 1
+  fadeDuration: 0.5
+  moveDuration: 1
+  shiftOffset: {x: 0, y: 0}
+  move: 0
   shiftIntoPlace: 0
   waitUntilFinished: 0
 --- !u!1 &760041130
@@ -1771,7 +1835,8 @@ MonoBehaviour:
   nameColor: {r: 0.055224285, g: 0.6886792, b: 0.634383, a: 1}
   soundEffect: {fileID: 0}
   portraits:
-  - {fileID: 21300000, guid: 06e6264fa02b51343bfee82bcd371081, type: 3}
+  - {fileID: 21300000, guid: fcac114e711a86544bba035546d863fe, type: 3}
+  - {fileID: 21300000, guid: b04a48e9927e3c64c97c046048576561, type: 3}
   portraitsFace: 0
   setSayDialog: {fileID: 0}
   description: 
@@ -1897,7 +1962,8 @@ MonoBehaviour:
   nameColor: {r: 0.24029905, g: 0.30300564, b: 0.6792453, a: 1}
   soundEffect: {fileID: 0}
   portraits:
-  - {fileID: 21300000, guid: a78540e61675ee946a78de3b4f855da3, type: 3}
+  - {fileID: 21300000, guid: 3751c0e402f3e7643bc0f7b235c0cca3, type: 3}
+  - {fileID: 21300000, guid: f083f2c7419a1c84cb2a48ff0c021fce, type: 3}
   portraitsFace: 0
   setSayDialog: {fileID: 0}
   description: 
