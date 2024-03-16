@@ -8,7 +8,7 @@ using UnityEngine.EventSystems;
 public class PickItem : MonoBehaviour
 {
     public GameObject[] itemsToPickFrom;
-    string[] descriptions =  {"Item 0 Description", "Item 1 Description", "Item 2 Description"};
+    string[] descriptions =  {"Eviction Notice", "Photo ID", "Office Chair (TEMP)"};
     [SerializeField] TMP_Text itemText; 
   
     //all items player can chose from need to be set to the itemsLayer

@@ -11,8 +11,6 @@ public class RaycastInteractable : MonoBehaviour
     public LayerMask interactMask;
     public LayerMask validMask;
     public LayerMask itemsMask;
-    public GameObject panelValid;
-    public GameObject panelInvalid;
     public string winningLevel;
     public string losingLevel;
 
@@ -69,8 +67,8 @@ public class RaycastInteractable : MonoBehaviour
         else if (Physics.Raycast(ray, out objHit, distance, validMask))
         {                       
             Debug.Log("Clicked on the valid <" + objHit.transform.name + "> item");
-            SceneManager.LoadScene(winningLevel);
-            //panelValid.SetActive(true);
+            //SceneManager.LoadScene(winningLevel);
+           //call bool from PanelScript here
             
         }
 
@@ -78,8 +76,9 @@ public class RaycastInteractable : MonoBehaviour
         else if (Physics.Raycast(ray, out objHit, distance, itemsMask))
         {                             
             Debug.Log("Clicked on the wrong <" + objHit.transform.name + "> item");
-            SceneManager.LoadScene(losingLevel);
+            //SceneManager.LoadScene(losingLevel);
             //panelInvalid.SetActive(true);
+            //call bool from PanelScript here
             
         }
     }
