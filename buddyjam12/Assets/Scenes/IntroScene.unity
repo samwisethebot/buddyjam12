@@ -539,6 +539,88 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &312467379
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 312467381}
+  - component: {fileID: 312467380}
+  m_Layer: 0
+  m_Name: ghostGame
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &312467380
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 312467379}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: a695a98085605554eac7f5e9888b1524, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 19.2, y: 10.8}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &312467381
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 312467379}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &347027224
 GameObject:
   m_ObjectHideFlags: 0
@@ -813,7 +895,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 68
     y: 70
-    width: 78.085106
+    width: 118.085106
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1153,7 +1235,7 @@ MonoBehaviour:
   stage: {fileID: 0}
   character: {fileID: 1620653600}
   replacedCharacter: {fileID: 0}
-  portrait: {fileID: 21300000, guid: 3751c0e402f3e7643bc0f7b235c0cca3, type: 3}
+  portrait: {fileID: 21300000, guid: 2a8edf7b93b4f2b47ba069952a6dadb8, type: 3}
   offset: 0
   fromPosition: {fileID: 776947926}
   toPosition: {fileID: 1336731296}
@@ -1183,7 +1265,7 @@ MonoBehaviour:
   stage: {fileID: 0}
   character: {fileID: 1466376812}
   replacedCharacter: {fileID: 0}
-  portrait: {fileID: 21300000, guid: fcac114e711a86544bba035546d863fe, type: 3}
+  portrait: {fileID: 21300000, guid: b5f080e45290a014e8292c11f88c3d3a, type: 3}
   offset: 0
   fromPosition: {fileID: 1899062255}
   toPosition: {fileID: 1574257240}
@@ -1213,7 +1295,7 @@ MonoBehaviour:
   stage: {fileID: 0}
   character: {fileID: 1620653600}
   replacedCharacter: {fileID: 0}
-  portrait: {fileID: 21300000, guid: f083f2c7419a1c84cb2a48ff0c021fce, type: 3}
+  portrait: {fileID: 21300000, guid: 25b1357baa469f841baf9fab6fb7df1e, type: 3}
   offset: 0
   fromPosition: {fileID: 0}
   toPosition: {fileID: 0}
@@ -1243,7 +1325,7 @@ MonoBehaviour:
   stage: {fileID: 0}
   character: {fileID: 1466376812}
   replacedCharacter: {fileID: 0}
-  portrait: {fileID: 21300000, guid: b04a48e9927e3c64c97c046048576561, type: 3}
+  portrait: {fileID: 21300000, guid: 0237eeb401118d14d8d7c2c6966ae816, type: 3}
   offset: 0
   fromPosition: {fileID: 0}
   toPosition: {fileID: 0}
@@ -1837,6 +1919,8 @@ MonoBehaviour:
   portraits:
   - {fileID: 21300000, guid: fcac114e711a86544bba035546d863fe, type: 3}
   - {fileID: 21300000, guid: b04a48e9927e3c64c97c046048576561, type: 3}
+  - {fileID: 21300000, guid: b5f080e45290a014e8292c11f88c3d3a, type: 3}
+  - {fileID: 21300000, guid: 0237eeb401118d14d8d7c2c6966ae816, type: 3}
   portraitsFace: 0
   setSayDialog: {fileID: 0}
   description: 
@@ -1964,6 +2048,8 @@ MonoBehaviour:
   portraits:
   - {fileID: 21300000, guid: 3751c0e402f3e7643bc0f7b235c0cca3, type: 3}
   - {fileID: 21300000, guid: f083f2c7419a1c84cb2a48ff0c021fce, type: 3}
+  - {fileID: 21300000, guid: 2a8edf7b93b4f2b47ba069952a6dadb8, type: 3}
+  - {fileID: 21300000, guid: 25b1357baa469f841baf9fab6fb7df1e, type: 3}
   portraitsFace: 0
   setSayDialog: {fileID: 0}
   description: 
