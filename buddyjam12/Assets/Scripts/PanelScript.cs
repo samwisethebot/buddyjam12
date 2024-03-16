@@ -17,6 +17,8 @@ public class PanelScript : MonoBehaviour
     public bool isShowing;
     public string winningLevel;
     public string losingLevel;
+    public GameObject raycast;
+    private RaycastInteractable raycastScript;
     
 
 
@@ -26,11 +28,16 @@ public class PanelScript : MonoBehaviour
         player = GameObject.Find("Player");
         cam = GameObject.Find("Main Camera");
         cursor = GameObject.Find("Cursor");
+        raycastScript = raycast.GetComponent<RaycastInteractable>();
+        
         
     }
 
     void Update()
     {
+        showPanelValid = raycastScript.activateValidPanel;
+        showPanelInvalid = raycastScript.activateInvalidPanel;
+
         if (showPanelInvalid == false)
         
         {
@@ -39,6 +46,7 @@ public class PanelScript : MonoBehaviour
             {
              ActivatePlayer();
              panelValid.SetActive(false);
+
             }
             else if(showPanelValid)
             {
@@ -96,7 +104,10 @@ public class PanelScript : MonoBehaviour
     public void No()
     {
         showPanelInvalid = false;
+        raycastScript.activateInvalidPanel = false;
         showPanelValid = false;
+        raycastScript.activateValidPanel = false;
+      
     }
 
 
