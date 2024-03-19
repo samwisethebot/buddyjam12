@@ -2434,6 +2434,11 @@ GameObject:
   - component: {fileID: 2052345813}
   - component: {fileID: 2052345826}
   - component: {fileID: 2052345827}
+  - component: {fileID: 2052345832}
+  - component: {fileID: 2052345829}
+  - component: {fileID: 2052345831}
+  - component: {fileID: 2052345830}
+  - component: {fileID: 2052345828}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -2468,7 +2473,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 2052345810}
   selectedCommands:
-  - {fileID: 2052345816}
+  - {fileID: 2052345827}
   variables: []
   description: 
   stepPause: 0
@@ -2543,6 +2548,11 @@ MonoBehaviour:
   - {fileID: 2052345818}
   - {fileID: 2052345817}
   - {fileID: 2052345816}
+  - {fileID: 2052345832}
+  - {fileID: 2052345831}
+  - {fileID: 2052345830}
+  - {fileID: 2052345829}
+  - {fileID: 2052345828}
   - {fileID: 2052345815}
   - {fileID: 2052345814}
   - {fileID: 2052345813}
@@ -2592,7 +2602,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 14
   indentLevel: 0
-  storyText: FIND TEXT TO FINISH SCENE - GAME OVER
+  storyText: Happy haunting! And I'll see you next year for your rewal. Make sure
+    to bring everything the first time!
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -2619,7 +2630,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 5
   indentLevel: 0
-  storyText: '!!!!'
+  storyText: ...
   description: 
   character: {fileID: 451988290}
   portrait: {fileID: 0}
@@ -2646,7 +2657,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 12
   indentLevel: 0
-  storyText: Excellent! I can see that everything is in order.
+  storyText: I will review everything and you should receive your new permit in the
+    next few months
   description: 
   character: {fileID: 101527258}
   portrait: {fileID: 0}
@@ -2781,7 +2793,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 13
   indentLevel: 0
-  storyText: It's... to renew my haunting permit... again
+  storyText: 'My haunting permit... I need to renew it... '
   description: 
   character: {fileID: 451988290}
   portrait: {fileID: 0}
@@ -2972,6 +2984,141 @@ MonoBehaviour:
     floatRef: {fileID: 0}
     floatVal: 2
   durationOLD: 0
+--- !u!114 &2052345828
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2052345807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 21
+  indentLevel: 0
+  storyText: ...
+  description: 
+  character: {fileID: 451988290}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &2052345829
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2052345807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 18
+  indentLevel: 0
+  storyText: It wasn't that hard now, was it?
+  description: 
+  character: {fileID: 101527258}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &2052345830
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2052345807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 20
+  indentLevel: 0
+  storyText: You have brought all the required material
+  description: 
+  character: {fileID: 101527258}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &2052345831
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2052345807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 19
+  indentLevel: 0
+  storyText: '!!!!'
+  description: 
+  character: {fileID: 451988290}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &2052345832
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2052345807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 17
+  indentLevel: 0
+  storyText: Excellent! I can see that everything is in order.
+  description: 
+  character: {fileID: 101527258}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
 --- !u!1 &2061884606
 GameObject:
   m_ObjectHideFlags: 0
